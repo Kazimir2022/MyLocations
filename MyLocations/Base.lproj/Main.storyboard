@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Message Label)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovo-HD-C3o">
-                                <rect key="frame" x="16" y="16" width="288" height="21"/>
+                                <rect key="frame" x="93.5" y="16" width="126.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -52,6 +52,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWa-jK-g5G">
+                                <rect key="frame" x="75" y="473" width="163" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Get My Location"/>
+                                <connections>
+                                    <action selector="getLocation" destination="BYZ-38-t0r" eventType="touchUpInside" id="btz-z0-4rc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fiv-Kq-khS">
+                                <rect key="frame" x="96" y="247" width="121" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Tag Location"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -59,7 +72,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="w9C-Hc-tUh" secondAttribute="trailing" constant="7" id="02E-FO-qm9"/>
                             <constraint firstItem="w9C-Hc-tUh" firstAttribute="top" secondItem="LNN-b4-bSs" secondAttribute="bottom" constant="9" id="11U-cf-Ava"/>
                             <constraint firstItem="ppk-sK-Uaw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="9" id="55q-mh-Y8Y"/>
-                            <constraint firstItem="ovo-HD-C3o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="DeS-kU-W7m"/>
+                            <constraint firstItem="YWa-jK-g5G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="9Fd-De-fCh"/>
+                            <constraint firstItem="fiv-Kq-khS" firstAttribute="centerX" secondItem="ovo-HD-C3o" secondAttribute="centerX" id="BJq-0u-nzw"/>
+                            <constraint firstItem="ovo-HD-C3o" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DeS-kU-W7m"/>
                             <constraint firstItem="4ef-PD-h9z" firstAttribute="leading" secondItem="ppk-sK-Uaw" secondAttribute="leading" id="Hl7-l7-hPC"/>
                             <constraint firstItem="LNN-b4-bSs" firstAttribute="baseline" secondItem="BHB-Me-96s" secondAttribute="baseline" id="LP3-f6-J7K"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4ef-PD-h9z" secondAttribute="trailing" constant="152" id="PvB-fK-hQC"/>
@@ -70,16 +85,22 @@
                             <constraint firstItem="4ef-PD-h9z" firstAttribute="top" secondItem="ppk-sK-Uaw" secondAttribute="bottom" constant="58" id="ZuY-Vq-QyN"/>
                             <constraint firstItem="BHB-Me-96s" firstAttribute="top" secondItem="ovo-HD-C3o" secondAttribute="bottom" constant="24" id="b2X-rN-4zf"/>
                             <constraint firstItem="BHB-Me-96s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="9" id="dq1-KA-P12"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ovo-HD-C3o" secondAttribute="trailing" constant="16" id="wzX-y8-4gH"/>
+                            <constraint firstItem="fiv-Kq-khS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="96" id="eo6-2A-eHn"/>
+                            <constraint firstItem="fiv-Kq-khS" firstAttribute="top" secondItem="4ef-PD-h9z" secondAttribute="bottom" constant="57" id="lv1-zk-c9c"/>
+                            <constraint firstItem="YWa-jK-g5G" firstAttribute="centerX" secondItem="fiv-Kq-khS" secondAttribute="centerX" id="lwF-Gi-msU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ovo-HD-C3o" secondAttribute="trailing" id="wzX-y8-4gH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YWa-jK-g5G" secondAttribute="bottom" constant="11" id="zMK-bw-PcX"/>
                             <constraint firstItem="LNN-b4-bSs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="BHB-Me-96s" secondAttribute="trailing" constant="8" symbolic="YES" id="zhN-Z0-FY5"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Tag" id="zKC-FA-Iou"/>
                     <connections>
                         <outlet property="addressLabel" destination="4ef-PD-h9z" id="qk9-Ch-8yE"/>
+                        <outlet property="getButton" destination="YWa-jK-g5G" id="Dtw-In-szx"/>
                         <outlet property="latitudeLabel" destination="LNN-b4-bSs" id="Pgc-sV-zI2"/>
                         <outlet property="longitudeLabel" destination="w9C-Hc-tUh" id="9PA-g4-caY"/>
                         <outlet property="messageLabel" destination="ovo-HD-C3o" id="2p2-4n-jXG"/>
+                        <outlet property="tagButton" destination="fiv-Kq-khS" id="34k-v3-Dd2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
