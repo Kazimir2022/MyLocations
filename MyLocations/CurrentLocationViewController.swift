@@ -30,6 +30,10 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
       locationManager.requestWhenInUseAuthorization()
       return
     }
+    if authStatus == .denied || authStatus == .restricted {
+      showLocationServicesDeniedAlert()
+      return
+    }
     
     locationManager.delegate = self
     locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
@@ -50,6 +54,22 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
   ) {
     let newLocation = locations.last!
     print("didUpdateLocations \(newLocation)")
+  }
+  
+  // MARK: - Helper Methods
+  func showLocationServicesDeniedAlert() {
+    let alert = UIAlertController(
+      title: "Location Services Disabled",
+      message: "Please enable location services for this app in Settings.",
+      preferredStyle: .alert)
+
+    let okAction = UIAlertAction(
+      title: "OK",
+      style: .default,
+      handler: nil)
+    alert.addAction(okAction)
+
+    present(alert, animated: true, completion: nil)
   }
 }
 
