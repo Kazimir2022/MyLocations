@@ -41,6 +41,8 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
     locationManager.delegate = self
     locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
     locationManager.startUpdatingLocation()
+    startLocationManager()
+    updateLabels()
   }
   
   // MARK: - CLLocationManagerDelegate
@@ -64,9 +66,29 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
   ) {
     let newLocation = locations.last!
     print("didUpdateLocations \(newLocation)")
-    location = newLocation
-    updateLabels()
+    
+    if newLocation.timestamp.timeIntervalSinceNow < -5 {
+      return
+    }
+    
+    if newLocation.horizontalAccuracy < 0 {
+      return
+    }
+    if location == nil || location!.horizontalAccuracy > newLocation.horizontalAccuracy {
+      
+      // 4
+      lastLocationError = nil
+      location = newLocation
+      
+      // 5
+      if newLocation.horizontalAccuracy <= locationManager.desiredAccuracy {
+        print("*** We're done!")
+        stopLocationManager()
+      }
+      updateLabels()
+    }
   }
+  
   
   // MARK: - Helper Methods
   func showLocationServicesDeniedAlert() {
@@ -115,6 +137,15 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
         statusMessage = "Tap 'Get My Location' to Start"
       }
       messageLabel.text = statusMessage
+    }
+  }
+  
+  func startLocationManager() {
+    if CLLocationManager.locationServicesEnabled() {
+      locationManager.delegate = self
+      locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+      locationManager.startUpdatingLocation()
+      updatingLocation = true
     }
   }
   
