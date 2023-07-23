@@ -37,11 +37,13 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
       showLocationServicesDeniedAlert()
       return
     }
-    
-    locationManager.delegate = self
-    locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-    locationManager.startUpdatingLocation()
-    startLocationManager()
+    if updatingLocation {
+      stopLocationManager()
+    } else {
+      location = nil
+      lastLocationError = nil
+      startLocationManager()
+    }
     updateLabels()
   }
   
@@ -85,6 +87,7 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
         print("*** We're done!")
         stopLocationManager()
       }
+      lastLocationError = nil
       updateLabels()
     }
   }
@@ -138,6 +141,7 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
       }
       messageLabel.text = statusMessage
     }
+    configureGetButton()
   }
   
   func startLocationManager() {
@@ -154,6 +158,14 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
       locationManager.stopUpdatingLocation()
       locationManager.delegate = nil
       updatingLocation = false
+    }
+  }
+  
+  func configureGetButton() {
+    if updatingLocation {
+      getButton.setTitle("Stop", for: .normal)
+    } else {
+      getButton.setTitle("Get My Location", for: .normal)
     }
   }
 }
