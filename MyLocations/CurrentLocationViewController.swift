@@ -22,7 +22,7 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
   var lastLocationError: Error?
   let geocoder = CLGeocoder()
   var placemark: CLPlacemark?
-  var performingReverseGeocoding = false // один запрос. Исп или нет?
+  var performingReverseGeocoding = false
   var lastGeocodingError: Error?
   var timer: Timer?
   
@@ -105,9 +105,6 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
         performingReverseGeocoding = false
       }
       
-      lastLocationError = nil
-      updateLabels()
-      // The new code begins here:
       if !performingReverseGeocoding {
         print("*** Going to geocode")
         
@@ -162,6 +159,7 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
         location.coordinate.longitude)
       tagButton.isHidden = false
       messageLabel.text = ""
+      
       if let placemark = placemark {
         addressLabel.text = string(from: placemark)
       } else if performingReverseGeocoding {
@@ -217,7 +215,6 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
       locationManager.stopUpdatingLocation()
       locationManager.delegate = nil
       updatingLocation = false
-      
       
       if let timer = timer {
         timer.invalidate()
