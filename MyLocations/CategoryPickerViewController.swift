@@ -37,6 +37,19 @@ class CategoryPickerViewController: UITableViewController {
     
   }
   
+  // MARK: - Navigation
+  override func prepare(
+    for segue: UIStoryboardSegue,
+    sender: Any?
+  ) {
+    if segue.identifier == "PickedCategory" {
+      let cell = sender as! UITableViewCell
+      if let indexPath = tableView.indexPath(for: cell) {
+        selectedCategoryName = categories[indexPath.row]
+      }
+    }
+  }
+  
   // MARK: - Table View Delegates
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return categories.count
@@ -49,10 +62,10 @@ class CategoryPickerViewController: UITableViewController {
     let cell = tableView.dequeueReusableCell(
       withIdentifier: "Cell",
       for: indexPath)
-
+    
     let categoryName = categories[indexPath.row]
     cell.textLabel!.text = categoryName
-
+    
     if categoryName == selectedCategoryName {
       cell.accessoryType = .checkmark
     } else {
