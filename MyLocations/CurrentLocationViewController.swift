@@ -31,6 +31,16 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
     updateLabels()
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    navigationController?.isNavigationBarHidden = true
+  }
+  
+  override func viewDidDisappear(_ animated: Bool) {
+    super.viewDidDisappear(animated)
+    navigationController?.isNavigationBarHidden = false
+  }
+  
   // MARK: - Actions
   @IBAction func getLocation() {
     let authStatus = locationManager.authorizationStatus
