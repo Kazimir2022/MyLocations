@@ -51,7 +51,7 @@ class LocationDetailsViewController: UITableViewController {
       controller.selectedCategoryName = categoryName
     }
   }
-
+  
   // MARK: - Actions
   @IBAction func done() {
     navigationController?.popViewController(animated: true)
@@ -95,5 +95,25 @@ class LocationDetailsViewController: UITableViewController {
   
   func format(date: Date) -> String {
     return dateFormatter.string(from: date)
+  }
+  // MARK: - Table View Delegates
+  override func tableView(
+    _ tableView: UITableView,
+    willSelectRowAt indexPath: IndexPath
+  ) -> IndexPath? {
+    if indexPath.section == 0 || indexPath.section == 1 {
+      return indexPath
+    } else {
+      return nil
+    }
+  }
+  
+  override func tableView(
+    _ tableView: UITableView,
+    didSelectRowAt indexPath: IndexPath
+  ) {
+    if indexPath.section == 0 && indexPath.row == 0 {
+      descriptionTextView.becomeFirstResponder()
+    }
   }
 }
