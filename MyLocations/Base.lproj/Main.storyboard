@@ -308,7 +308,18 @@
                             <outlet property="delegate" destination="Npd-r6-GNB" id="JPO-4O-JAc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Tag Location" id="3os-Z3-eCJ"/>
+                    <navigationItem key="navigationItem" title="Tag Location" id="3os-Z3-eCJ">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Akq-B9-7AM">
+                            <connections>
+                                <action selector="cancel" destination="Npd-r6-GNB" id="HFa-tK-0f2"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="okZ-l0-Ovp">
+                            <connections>
+                                <action selector="done" destination="Npd-r6-GNB" id="Jld-iD-YyK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="addressLabel" destination="B7x-nN-xaz" id="Ocs-Ay-SWP"/>
                         <outlet property="categoryLabel" destination="ofv-IC-2Bz" id="Cpv-M8-xj5"/>
