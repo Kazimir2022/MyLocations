@@ -62,9 +62,15 @@ class LocationDetailsViewController: UITableViewController {
   // MARK: - Actions
   @IBAction func done() {
     guard let mainView = navigationController?.parent?.view
-        else { return }
-      let hudView = HudView.hud(inView: mainView, animated: true)
-      hudView.text = "Tagged"
+    else { return }
+    let hudView = HudView.hud(inView: mainView, animated: true)
+    hudView.text = "Tagged"
+    let delayInSeconds = 0.6
+    DispatchQueue.main.asyncAfter(deadline: .now() + delayInSeconds) {
+      hudView.hide()   // Add this line
+      self.navigationController?.popViewController(animated: true)
+    }
+    
   }
   
   @IBAction func cancel() {
