@@ -19,6 +19,7 @@ class HudView: UIView {
     
     view.addSubview(hudView)
     view.isUserInteractionEnabled = false
+    hudView.show(animated: animated)
     return hudView
   }
   
@@ -57,7 +58,21 @@ class HudView: UIView {
         y: center.y - round(textSize.height / 2) + boxHeight / 4)
       
       text.draw(at: textPoint, withAttributes: attribs)
-      
+    }
+  }
+  
+  // MARK: - Helper methods
+  func show(animated: Bool) {
+    if animated {
+      // 1
+      alpha = 0
+      transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+      // 2
+      UIView.animate(withDuration: 0.3) {
+        // 3
+        self.alpha = 1
+        self.transform = CGAffineTransform.identity
+      }
     }
   }
 }
