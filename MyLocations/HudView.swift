@@ -37,5 +37,12 @@ class HudView: UIView {
       cornerRadius: 10)
     UIColor(white: 0.3, alpha: 0.8).setFill()
     roundedRect.fill()
+    
+ if let image = UIImage(named: "Checkmark") {
+      let imagePoint = CGPoint(
+        x: center.x - round(image.size.width / 2),
+        y: center.y - round(image.size.height / 2) - boxHeight / 8)
+      image.draw(at: imagePoint)
+    }
   }
 }
