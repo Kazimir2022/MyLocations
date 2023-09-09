@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE3CDCCD2AACB953003CDFD8 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3CDCCC2AACB953003CDFD8 /* Functions.swift */; };
 		FE4318302A8287F6005EDBFB /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE43182F2A8287F6005EDBFB /* LocationDetailsViewController.swift */; };
 		FE6C92502A8E344D007A71D4 /* CategoryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6C924F2A8E344D007A71D4 /* CategoryPickerViewController.swift */; };
 		FEA75D362A973F11001A7DE1 /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA75D352A973F11001A7DE1 /* HudView.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FE3CDCCC2AACB953003CDFD8 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		FE43182F2A8287F6005EDBFB /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
 		FE6C924F2A8E344D007A71D4 /* CategoryPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPickerViewController.swift; sourceTree = "<group>"; };
 		FEA75D352A973F11001A7DE1 /* HudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				FE43182F2A8287F6005EDBFB /* LocationDetailsViewController.swift */,
 				FE6C924F2A8E344D007A71D4 /* CategoryPickerViewController.swift */,
 				FEA75D352A973F11001A7DE1 /* HudView.swift */,
+				FE3CDCCC2AACB953003CDFD8 /* Functions.swift */,
 			);
 			path = MyLocations;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				FE6C92502A8E344D007A71D4 /* CategoryPickerViewController.swift in Sources */,
 				FED298A52A63C8A200551123 /* CurrentLocationViewController.swift in Sources */,
 				FED298A12A63C8A200551123 /* AppDelegate.swift in Sources */,
+				FE3CDCCD2AACB953003CDFD8 /* Functions.swift in Sources */,
 				FED298AB2A63C8A200551123 /* MyLocations.xcdatamodeld in Sources */,
 				FED298A32A63C8A200551123 /* SceneDelegate.swift in Sources */,
 				FEA75D362A973F11001A7DE1 /* HudView.swift in Sources */,
