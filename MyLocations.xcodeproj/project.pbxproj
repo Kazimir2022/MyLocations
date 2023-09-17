@@ -11,6 +11,8 @@
 		FE4318302A8287F6005EDBFB /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE43182F2A8287F6005EDBFB /* LocationDetailsViewController.swift */; };
 		FE6C92502A8E344D007A71D4 /* CategoryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6C924F2A8E344D007A71D4 /* CategoryPickerViewController.swift */; };
 		FEA75D362A973F11001A7DE1 /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA75D352A973F11001A7DE1 /* HudView.swift */; };
+		FEB77A3C2AB6E3FE00F6E9A2 /* Location+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB77A3A2AB6E3FE00F6E9A2 /* Location+CoreDataClass.swift */; };
+		FEB77A3D2AB6E3FE00F6E9A2 /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB77A3B2AB6E3FE00F6E9A2 /* Location+CoreDataProperties.swift */; };
 		FED298A12A63C8A200551123 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED298A02A63C8A200551123 /* AppDelegate.swift */; };
 		FED298A32A63C8A200551123 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED298A22A63C8A200551123 /* SceneDelegate.swift */; };
 		FED298A52A63C8A200551123 /* CurrentLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED298A42A63C8A200551123 /* CurrentLocationViewController.swift */; };
@@ -25,6 +27,8 @@
 		FE43182F2A8287F6005EDBFB /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
 		FE6C924F2A8E344D007A71D4 /* CategoryPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPickerViewController.swift; sourceTree = "<group>"; };
 		FEA75D352A973F11001A7DE1 /* HudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
+		FEB77A3A2AB6E3FE00F6E9A2 /* Location+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FEB77A3B2AB6E3FE00F6E9A2 /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FED2989D2A63C8A200551123 /* MyLocations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLocations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FED298A02A63C8A200551123 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FED298A22A63C8A200551123 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +54,8 @@
 		FED298942A63C8A200551123 = {
 			isa = PBXGroup;
 			children = (
+				FEB77A3A2AB6E3FE00F6E9A2 /* Location+CoreDataClass.swift */,
+				FEB77A3B2AB6E3FE00F6E9A2 /* Location+CoreDataProperties.swift */,
 				FED2989F2A63C8A200551123 /* MyLocations */,
 				FED2989E2A63C8A200551123 /* Products */,
 			);
@@ -157,8 +163,10 @@
 				FED298A52A63C8A200551123 /* CurrentLocationViewController.swift in Sources */,
 				FED298A12A63C8A200551123 /* AppDelegate.swift in Sources */,
 				FE3CDCCD2AACB953003CDFD8 /* Functions.swift in Sources */,
+				FEB77A3D2AB6E3FE00F6E9A2 /* Location+CoreDataProperties.swift in Sources */,
 				FED298AB2A63C8A200551123 /* MyLocations.xcdatamodeld in Sources */,
 				FED298A32A63C8A200551123 /* SceneDelegate.swift in Sources */,
+				FEB77A3C2AB6E3FE00F6E9A2 /* Location+CoreDataClass.swift in Sources */,
 				FEA75D362A973F11001A7DE1 /* HudView.swift in Sources */,
 				FE4318302A8287F6005EDBFB /* LocationDetailsViewController.swift in Sources */,
 			);
