@@ -397,18 +397,40 @@
         <!--Root View Controller-->
         <scene sceneID="4Wn-Gx-IUK">
             <objects>
-                <tableViewController id="oWw-nN-j6h" sceneMemberID="viewController">
+                <tableViewController id="oWw-nN-j6h" customClass="LocationsViewController" customModule="MyLocations" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="9rK-UO-tuG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Jio-Wg-hKD">
-                                <rect key="frame" x="0.0" y="50" width="320" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationCell" rowHeight="65" id="Jio-Wg-hKD">
+                                <rect key="frame" x="0.0" y="50" width="320" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jio-Wg-hKD" id="WR8-Xc-nYF">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yiw-XI-hw4">
+                                            <rect key="frame" x="16" y="39" width="53" height="15"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hz-Gp-vD0">
+                                            <rect key="frame" x="16" y="13" width="95" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Yiw-XI-hw4" firstAttribute="centerX" secondItem="6hz-Gp-vD0" secondAttribute="centerX" constant="-21" id="CWo-CK-8XO"/>
+                                        <constraint firstItem="Yiw-XI-hw4" firstAttribute="bottom" secondItem="WR8-Xc-nYF" secondAttribute="bottomMargin" id="IX2-Pp-GPa"/>
+                                        <constraint firstAttribute="leading" secondItem="Yiw-XI-hw4" secondAttribute="leading" constant="-16" id="eyX-iq-Y6C"/>
+                                        <constraint firstItem="6hz-Gp-vD0" firstAttribute="top" secondItem="WR8-Xc-nYF" secondAttribute="topMargin" constant="2" id="hVP-GO-MWN"/>
+                                        <constraint firstItem="Yiw-XI-hw4" firstAttribute="top" secondItem="6hz-Gp-vD0" secondAttribute="bottom" constant="5.5" id="hoG-ez-W7R"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Yiw-XI-hw4" secondAttribute="trailing" constant="20" symbolic="YES" id="udH-jN-4se"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -421,7 +443,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jM4-bS-KiY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1950" y="831"/>
+            <point key="canvasLocation" x="1950" y="830.28169014084506"/>
         </scene>
         <!--Locations-->
         <scene sceneID="ZbD-cY-qlI">
@@ -429,7 +451,7 @@
                 <navigationController id="CiQ-WH-D9I" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Locations" id="YZb-bb-Djj"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xBE-zG-xOJ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -447,7 +469,7 @@
                     <tabBarItem key="tabBarItem" title="Tag" id="zKC-FA-Iou"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4nH-SE-dK5">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
