@@ -13,6 +13,7 @@
 		FEA75D362A973F11001A7DE1 /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA75D352A973F11001A7DE1 /* HudView.swift */; };
 		FEB77A3C2AB6E3FE00F6E9A2 /* Location+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB77A3A2AB6E3FE00F6E9A2 /* Location+CoreDataClass.swift */; };
 		FEB77A3D2AB6E3FE00F6E9A2 /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB77A3B2AB6E3FE00F6E9A2 /* Location+CoreDataProperties.swift */; };
+		FEC046812B2CB32000A0EEEC /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC046802B2CB32000A0EEEC /* LocationCell.swift */; };
 		FED298A12A63C8A200551123 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED298A02A63C8A200551123 /* AppDelegate.swift */; };
 		FED298A32A63C8A200551123 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED298A22A63C8A200551123 /* SceneDelegate.swift */; };
 		FED298A52A63C8A200551123 /* CurrentLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED298A42A63C8A200551123 /* CurrentLocationViewController.swift */; };
@@ -30,6 +31,7 @@
 		FEA75D352A973F11001A7DE1 /* HudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
 		FEB77A3A2AB6E3FE00F6E9A2 /* Location+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FEB77A3B2AB6E3FE00F6E9A2 /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FEC046802B2CB32000A0EEEC /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		FED2989D2A63C8A200551123 /* MyLocations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLocations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FED298A02A63C8A200551123 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FED298A22A63C8A200551123 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				FED298A62A63C8A200551123 /* Main.storyboard */,
 				FED298A92A63C8A200551123 /* MyLocations.xcdatamodeld */,
 				FED298A22A63C8A200551123 /* SceneDelegate.swift */,
+				FEC046802B2CB32000A0EEEC /* LocationCell.swift */,
 				FEF698E32B220564003281F2 /* LocationsViewController.swift */,
 			);
 			path = MyLocations;
@@ -168,6 +171,7 @@
 				FE3CDCCD2AACB953003CDFD8 /* Functions.swift in Sources */,
 				FEF698E42B220564003281F2 /* LocationsViewController.swift in Sources */,
 				FEB77A3D2AB6E3FE00F6E9A2 /* Location+CoreDataProperties.swift in Sources */,
+				FEC046812B2CB32000A0EEEC /* LocationCell.swift in Sources */,
 				FED298AB2A63C8A200551123 /* MyLocations.xcdatamodeld in Sources */,
 				FED298A32A63C8A200551123 /* SceneDelegate.swift in Sources */,
 				FEB77A3C2AB6E3FE00F6E9A2 /* Location+CoreDataClass.swift in Sources */,
