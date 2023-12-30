@@ -17,16 +17,17 @@ class LocationsViewController: UITableViewController {
     let entity = Location.entity()
     fetchRequest.entity = entity
     
-    let sort1 = NSSortDescriptor(key: "category", ascending: true)
-    let sort2 = NSSortDescriptor(key: "date", ascending: true)
-    fetchRequest.sortDescriptors = [sort1, sort2]
+    let sortDescriptor = NSSortDescriptor(
+        key: "date",
+        ascending: true)
+      fetchRequest.sortDescriptors = [sortDescriptor]
     
     fetchRequest.fetchBatchSize = 20
     
     let fetchedResultsController = NSFetchedResultsController(
       fetchRequest: fetchRequest,
       managedObjectContext: self.managedObjectContext,
-      sectionNameKeyPath: "category",
+      sectionNameKeyPath: nil,
       cacheName: "Locations")
     
     fetchedResultsController.delegate = self
@@ -64,13 +65,30 @@ class LocationsViewController: UITableViewController {
     cellForRowAt indexPath: IndexPath
   ) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(
-        withIdentifier: "LocationCell",
-        for: indexPath) as! LocationCell
-
-      let location = fetchedResultsController.object(at: indexPath)
-      cell.configure(for: location)
-
-      return cell
+      withIdentifier: "LocationCell",
+      for: indexPath) as! LocationCell
+    
+    let location = fetchedResultsController.object(at: indexPath)
+    cell.configure(for: location)
+    
+    return cell
+  }
+  
+  override func tableView(
+    _ tableView: UITableView,
+    commit editingStyle: UITableViewCell.EditingStyle,
+    forRowAt indexPath: IndexPath
+  ) {
+    if editingStyle == .delete {
+      let location = fetchedResultsController.object(
+        at: indexPath)
+      managedObjectContext.delete(location)
+      do {
+        try managedObjectContext.save()
+      } catch {
+        fatalCoreDataError(error)
+      }
+    }
   }
   
   // MARK: - Navigation
