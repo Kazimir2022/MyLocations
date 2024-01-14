@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FE3CDCCD2AACB953003CDFD8 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3CDCCC2AACB953003CDFD8 /* Functions.swift */; };
+		FE3D1C912B4B23AF0005E41F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3D1C902B4B23AF0005E41F /* MapViewController.swift */; };
 		FE4318302A8287F6005EDBFB /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE43182F2A8287F6005EDBFB /* LocationDetailsViewController.swift */; };
 		FE6C92502A8E344D007A71D4 /* CategoryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6C924F2A8E344D007A71D4 /* CategoryPickerViewController.swift */; };
 		FEA75D362A973F11001A7DE1 /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA75D352A973F11001A7DE1 /* HudView.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		FE3CDCCC2AACB953003CDFD8 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		FE3D1C902B4B23AF0005E41F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		FE43182F2A8287F6005EDBFB /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
 		FE6C924F2A8E344D007A71D4 /* CategoryPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPickerViewController.swift; sourceTree = "<group>"; };
 		FEA75D352A973F11001A7DE1 /* HudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				FED298A92A63C8A200551123 /* MyLocations.xcdatamodeld */,
 				FED298A22A63C8A200551123 /* SceneDelegate.swift */,
 				FEC046802B2CB32000A0EEEC /* LocationCell.swift */,
+				FE3D1C902B4B23AF0005E41F /* MapViewController.swift */,
 				FEF698E32B220564003281F2 /* LocationsViewController.swift */,
 			);
 			path = MyLocations;
@@ -171,6 +174,7 @@
 				FE3CDCCD2AACB953003CDFD8 /* Functions.swift in Sources */,
 				FEF698E42B220564003281F2 /* LocationsViewController.swift in Sources */,
 				FEB77A3D2AB6E3FE00F6E9A2 /* Location+CoreDataProperties.swift in Sources */,
+				FE3D1C912B4B23AF0005E41F /* MapViewController.swift in Sources */,
 				FEC046812B2CB32000A0EEEC /* LocationCell.swift in Sources */,
 				FED298AB2A63C8A200551123 /* MyLocations.xcdatamodeld in Sources */,
 				FED298A32A63C8A200551123 /* SceneDelegate.swift in Sources */,
