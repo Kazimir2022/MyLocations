@@ -11,7 +11,19 @@ import CoreData
 class MapViewController: UIViewController {
   @IBOutlet var mapView: MKMapView!
   
-  var managedObjectContext: NSManagedObjectContext!
+  var managedObjectContext: NSManagedObjectContext! {
+    didSet {
+      NotificationCenter.default.addObserver(
+        forName: Notification.Name.NSManagedObjectContextObjectsDidChange,
+        object: managedObjectContext,
+        queue: OperationQueue.main
+      ) { _ in
+        if self.isViewLoaded {
+          self.updateLocations()
+        }
+      }
+    }
+  }
   
   var locations = [Location]()
   
@@ -23,7 +35,7 @@ class MapViewController: UIViewController {
     }
   }
   
- // MARK: - Navigation
+  // MARK: - Navigation
   override func prepare(
     for segue: UIStoryboardSegue,
     sender: Any?
@@ -31,7 +43,7 @@ class MapViewController: UIViewController {
     if segue.identifier == "EditLocation" {
       let controller = segue.destination as! LocationDetailsViewController
       controller.managedObjectContext = managedObjectContext
-
+      
       let button = sender as! UIButton
       let location = locations[button.tag]
       controller.locationToEdit = location
