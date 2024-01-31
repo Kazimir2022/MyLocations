@@ -85,7 +85,6 @@ class MapViewController: UIViewController {
   
   func region(for annotations: [MKAnnotation]) -> MKCoordinateRegion {
     let region: MKCoordinateRegion
-    mapView.userLocation.coordinate
     
     switch annotations.count {
     case 0:
