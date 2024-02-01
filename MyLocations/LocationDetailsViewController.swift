@@ -186,7 +186,8 @@ class LocationDetailsViewController: UITableViewController {
     if indexPath.section == 0 && indexPath.row == 0 {
       descriptionTextView.becomeFirstResponder()
     } else if indexPath.section == 1 && indexPath.row == 0 {
-      choosePhotoFromLibrary()
+      tableView.deselectRow(at: indexPath, animated: true)
+      pickPhoto()
     }
   }
 }
@@ -210,6 +211,43 @@ extension LocationDetailsViewController: UIImagePickerControllerDelegate,
     imagePicker.allowsEditing = true
     present(imagePicker, animated: true, completion: nil)
     
+  }
+  
+  func pickPhoto() {
+    if UIImagePickerController.isSourceTypeAvailable(.camera) {
+      showPhotoMenu()
+    } else {
+      choosePhotoFromLibrary()
+    }
+  }
+  
+  func showPhotoMenu() {
+    let alert = UIAlertController(
+      title: nil,
+      message: nil,
+      preferredStyle: .actionSheet)
+    
+    let actCancel = UIAlertAction(
+      title: "Cancel",
+      style: .cancel,
+      handler: nil)
+    alert.addAction(actCancel)
+    
+    let actPhoto = UIAlertAction(
+      title: "Take Photo",
+      style: .default) { _ in
+        self.takePhotoWithCamera()
+      }
+    alert.addAction(actPhoto)
+    
+    let actLibrary = UIAlertAction(
+      title: "Choose From Library",
+      style: .default) { _ in
+        self.choosePhotoFromLibrary()
+      }
+    alert.addAction(actLibrary)
+    
+    present(alert, animated: true, completion: nil)
   }
   
   // MARK: - Image Picker Delegates
