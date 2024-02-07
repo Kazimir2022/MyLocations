@@ -177,22 +177,22 @@
                             <tableViewSection id="kJL-9t-jIH">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" id="hIt-yF-V3O">
-                                        <rect key="frame" x="0.0" y="223" width="320" height="64.5"/>
+                                        <rect key="frame" x="0.0" y="223" width="320" height="44.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hIt-yF-V3O" id="k6t-6o-1XJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="293.5" height="64.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="293.5" height="44.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYL-U4-0aM">
-                                                    <rect key="frame" x="16" y="25" width="59" height="15"/>
+                                                    <rect key="frame" x="16" y="15" width="59" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PKV-kh-R7x">
-                                                    <rect key="frame" x="91" y="10" width="194.5" height="44.5"/>
+                                                    <rect key="frame" x="91" y="10" width="194.5" height="24.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="44" id="qOW-r2-pfR"/>
+                                                        <constraint firstAttribute="height" constant="24" id="qOW-r2-pfR"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
@@ -211,7 +211,7 @@
                             <tableViewSection id="JAT-O7-2Nl">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="MVU-Dh-5up" detailTextLabel="Rsu-mx-VPq" style="IBUITableViewCellStyleValue1" id="bKI-sn-cFb">
-                                        <rect key="frame" x="0.0" y="323.5" width="320" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="303.5" width="320" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bKI-sn-cFb" id="AFS-IJ-49g">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -235,7 +235,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="T2U-7a-BNS" detailTextLabel="VXC-5P-IfA" style="IBUITableViewCellStyleValue1" id="NfB-Xb-28D">
-                                        <rect key="frame" x="0.0" y="367" width="320" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="347" width="320" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NfB-Xb-28D" id="kRr-L3-T1C">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -259,7 +259,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="btJ-m1-Y1d">
-                                        <rect key="frame" x="0.0" y="410.5" width="320" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="390.5" width="320" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="btJ-m1-Y1d" id="PDj-tm-Awj">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -288,7 +288,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="xwz-Pc-gw5" detailTextLabel="mmy-YL-MpH" style="IBUITableViewCellStyleValue1" id="VF0-31-qyO">
-                                        <rect key="frame" x="0.0" y="454" width="320" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="434" width="320" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VF0-31-qyO" id="E16-y3-OPz">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -337,6 +337,7 @@
                         <outlet property="categoryLabel" destination="ofv-IC-2Bz" id="Cpv-M8-xj5"/>
                         <outlet property="dateLabel" destination="mmy-YL-MpH" id="DCc-6U-CsF"/>
                         <outlet property="descriptionTextView" destination="yd1-Kr-q6T" id="j7Y-Cg-wkb"/>
+                        <outlet property="imageHeight" destination="qOW-r2-pfR" id="n7u-od-ZdW"/>
                         <outlet property="imageView" destination="PKV-kh-R7x" id="pWb-25-Goy"/>
                         <outlet property="latitudeLabel" destination="Rsu-mx-VPq" id="YXN-pf-WDt"/>
                         <outlet property="longitudeLabel" destination="VXC-5P-IfA" id="yct-BJ-ojR"/>
