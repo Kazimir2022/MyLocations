@@ -23,6 +23,8 @@ class LocationDetailsViewController: UITableViewController {
   @IBOutlet var longitudeLabel: UILabel!
   @IBOutlet var addressLabel: UILabel!
   @IBOutlet var dateLabel: UILabel!
+  @IBOutlet var imageView: UIImageView!
+  @IBOutlet var addPhotoLabel: UILabel!
   
   var coordinate = CLLocationCoordinate2D(
     latitude: 0,
@@ -31,6 +33,7 @@ class LocationDetailsViewController: UITableViewController {
   var categoryName = "No Category"
   var managedObjectContext: NSManagedObjectContext!
   var date = Date()
+  var image: UIImage?
   
   var locationToEdit: Location? {
     didSet {
@@ -167,6 +170,13 @@ class LocationDetailsViewController: UITableViewController {
   func format(date: Date) -> String {
     return dateFormatter.string(from: date)
   }
+  
+  func show(image: UIImage) {
+    imageView.image = image
+    imageView.isHidden = false
+    addPhotoLabel.text = ""
+  }
+  
   // MARK: - Table View Delegates
   override func tableView(
     _ tableView: UITableView,
@@ -255,6 +265,10 @@ extension LocationDetailsViewController: UIImagePickerControllerDelegate,
     _ picker: UIImagePickerController,
     didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]
   ) {
+    image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
+    if let theImage = image {
+      show(image: theImage)
+    }
     dismiss(animated: true, completion: nil)
   }
   
