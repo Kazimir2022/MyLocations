@@ -35,6 +35,7 @@ class LocationDetailsViewController: UITableViewController {
   var managedObjectContext: NSManagedObjectContext!
   var date = Date()
   var image: UIImage?
+  var observer: Any!
   
   var locationToEdit: Location? {
     didSet {
@@ -76,6 +77,11 @@ class LocationDetailsViewController: UITableViewController {
     gestureRecognizer.cancelsTouchesInView = false
     tableView.addGestureRecognizer(gestureRecognizer)
     listenForBackgroundNotification()
+  }
+  
+  deinit {
+    print("*** deinit \(self)")
+    NotificationCenter.default.removeObserver(observer!)
   }
   
   // MARK: - Navigation
@@ -265,17 +271,19 @@ extension LocationDetailsViewController: UIImagePickerControllerDelegate,
   }
   
   func listenForBackgroundNotification() {
-    NotificationCenter.default.addObserver(
-      forName: UIScene.didEnterBackgroundNotification,
+    observer = NotificationCenter.default.addObserver(
+      forName: UIApplication.didEnterBackgroundNotification,
       object: nil,
-      queue: OperationQueue.main) { _ in
-        if self.presentedViewController != nil {
-          self.dismiss(animated: false, completion: nil)
+      queue: OperationQueue.main) { [weak self] _ in
+
+        if let weakSelf = self {
+          if weakSelf.presentedViewController != nil {
+            weakSelf.dismiss(animated: false, completion: nil)
+          }
+          weakSelf.descriptionTextView.resignFirstResponder()
         }
-        self.descriptionTextView.resignFirstResponder()
       }
   }
-  
   // MARK: - Image Picker Delegates
   func imagePickerController(
     _ picker: UIImagePickerController,
