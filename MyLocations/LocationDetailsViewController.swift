@@ -26,7 +26,7 @@ class LocationDetailsViewController: UITableViewController {
   @IBOutlet var imageView: UIImageView!
   @IBOutlet var addPhotoLabel: UILabel!
   @IBOutlet var imageHeight: NSLayoutConstraint!
-
+  
   var coordinate = CLLocationCoordinate2D(
     latitude: 0,
     longitude: 0)
@@ -75,6 +75,7 @@ class LocationDetailsViewController: UITableViewController {
       action: #selector(hideKeyboard))
     gestureRecognizer.cancelsTouchesInView = false
     tableView.addGestureRecognizer(gestureRecognizer)
+    listenForBackgroundNotification()
   }
   
   // MARK: - Navigation
@@ -261,6 +262,18 @@ extension LocationDetailsViewController: UIImagePickerControllerDelegate,
     alert.addAction(actLibrary)
     
     present(alert, animated: true, completion: nil)
+  }
+  
+  func listenForBackgroundNotification() {
+    NotificationCenter.default.addObserver(
+      forName: UIScene.didEnterBackgroundNotification,
+      object: nil,
+      queue: OperationQueue.main) { _ in
+        if self.presentedViewController != nil {
+          self.dismiss(animated: false, completion: nil)
+        }
+        self.descriptionTextView.resignFirstResponder()
+      }
   }
   
   // MARK: - Image Picker Delegates
