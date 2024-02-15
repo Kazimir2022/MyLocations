@@ -106,6 +106,7 @@ class LocationDetailsViewController: UITableViewController {
     } else {
       hudView.text = "Tagged"
       location = Location(context: managedObjectContext)
+      location.photoID = nil
     }
     
     location.locationDescription = descriptionTextView.text
@@ -114,6 +115,24 @@ class LocationDetailsViewController: UITableViewController {
     location.longitude = coordinate.longitude
     location.date = date
     location.placemark = placemark
+    
+    // Save image
+    if let image = image {
+      // 1
+      if !location.hasPhoto {
+        location.photoID = Location.nextPhotoID() as NSNumber
+      }
+      // 2
+      if let data = image.jpegData(compressionQuality: 0.5) {
+        // 3
+        do {
+          try data.write(to: location.photoURL, options: .atomic)
+        } catch {
+          print("Error writing file: \(error)")
+        }
+      }
+    }
+    
     do {
       try managedObjectContext.save()
       afterDelay(0.6) {
@@ -275,7 +294,7 @@ extension LocationDetailsViewController: UIImagePickerControllerDelegate,
       forName: UIApplication.didEnterBackgroundNotification,
       object: nil,
       queue: OperationQueue.main) { [weak self] _ in
-
+        
         if let weakSelf = self {
           if weakSelf.presentedViewController != nil {
             weakSelf.dismiss(animated: false, completion: nil)
