@@ -409,7 +409,7 @@
             </objects>
             <point key="canvasLocation" x="-43.125" y="-28.52112676056338"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Locations-->
         <scene sceneID="4Wn-Gx-IUK">
             <objects>
                 <tableViewController id="oWw-nN-j6h" customClass="LocationsViewController" customModule="MyLocations" customModuleProvider="target" sceneMemberID="viewController">
@@ -426,30 +426,46 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yiw-XI-hw4">
-                                            <rect key="frame" x="16" y="39" width="53" height="15"/>
+                                            <rect key="frame" x="76" y="37" width="53" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cgZ-ys-IAf">
+                                            <rect key="frame" x="16" y="6" width="52" height="52"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="52" id="968-g7-0Yk"/>
+                                                <constraint firstAttribute="height" constant="52" id="g0J-vf-EAO"/>
+                                            </constraints>
+                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hz-Gp-vD0">
-                                            <rect key="frame" x="16" y="13" width="95" height="20.5"/>
+                                            <rect key="frame" x="76" y="0.0" width="94.5" height="38"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="38" id="cz1-p4-lIl"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Yiw-XI-hw4" firstAttribute="centerX" secondItem="6hz-Gp-vD0" secondAttribute="centerX" constant="-21" id="CWo-CK-8XO"/>
-                                        <constraint firstItem="Yiw-XI-hw4" firstAttribute="bottom" secondItem="WR8-Xc-nYF" secondAttribute="bottomMargin" id="IX2-Pp-GPa"/>
-                                        <constraint firstAttribute="leading" secondItem="Yiw-XI-hw4" secondAttribute="leading" constant="-16" id="eyX-iq-Y6C"/>
-                                        <constraint firstItem="6hz-Gp-vD0" firstAttribute="top" secondItem="WR8-Xc-nYF" secondAttribute="topMargin" constant="2" id="hVP-GO-MWN"/>
-                                        <constraint firstItem="Yiw-XI-hw4" firstAttribute="top" secondItem="6hz-Gp-vD0" secondAttribute="bottom" constant="5.5" id="hoG-ez-W7R"/>
-                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Yiw-XI-hw4" secondAttribute="trailing" constant="20" symbolic="YES" id="udH-jN-4se"/>
+                                        <constraint firstAttribute="trailing" secondItem="Yiw-XI-hw4" secondAttribute="trailing" constant="191" id="81n-dz-xLd"/>
+                                        <constraint firstItem="Yiw-XI-hw4" firstAttribute="bottom" secondItem="WR8-Xc-nYF" secondAttribute="bottomMargin" id="A7s-5e-pNn"/>
+                                        <constraint firstItem="cgZ-ys-IAf" firstAttribute="leading" secondItem="WR8-Xc-nYF" secondAttribute="leading" constant="16" id="AfJ-nK-9Ec"/>
+                                        <constraint firstItem="6hz-Gp-vD0" firstAttribute="top" secondItem="WR8-Xc-nYF" secondAttribute="topMargin" constant="-11" id="GN7-Bt-n9W"/>
+                                        <constraint firstAttribute="trailing" secondItem="6hz-Gp-vD0" secondAttribute="trailing" constant="149.5" id="Nfv-fd-X5o"/>
+                                        <constraint firstItem="Yiw-XI-hw4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cgZ-ys-IAf" secondAttribute="trailing" constant="8" symbolic="YES" id="Txi-wg-mdw"/>
+                                        <constraint firstAttribute="bottom" secondItem="cgZ-ys-IAf" secondAttribute="bottom" constant="7" id="W0e-Jj-3Bg"/>
+                                        <constraint firstItem="Yiw-XI-hw4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6hz-Gp-vD0" secondAttribute="leading" id="Zly-XR-5hm"/>
+                                        <constraint firstItem="cgZ-ys-IAf" firstAttribute="top" secondItem="WR8-Xc-nYF" secondAttribute="top" constant="6" id="nit-bo-enP"/>
+                                        <constraint firstItem="6hz-Gp-vD0" firstAttribute="leading" secondItem="cgZ-ys-IAf" secondAttribute="trailing" constant="8" symbolic="YES" id="uoR-rI-Snf"/>
+                                        <constraint firstItem="6hz-Gp-vD0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cgZ-ys-IAf" secondAttribute="trailing" constant="8" symbolic="YES" id="zp1-Ku-PKS"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="addressLabel" destination="Yiw-XI-hw4" id="Fv0-ZD-fXJ"/>
                                     <outlet property="descriptionLabel" destination="6hz-Gp-vD0" id="6if-G4-ZYo"/>
+                                    <outlet property="photoImageView" destination="cgZ-ys-IAf" id="lCz-Up-7SS"/>
                                     <segue destination="Npd-r6-GNB" kind="show" identifier="EditLocation" id="VdI-hE-8wX"/>
                                 </connections>
                             </tableViewCell>
@@ -459,7 +475,7 @@
                             <outlet property="delegate" destination="oWw-nN-j6h" id="l1p-6e-Mac"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="fCf-So-LII"/>
+                    <navigationItem key="navigationItem" title="Locations" id="fCf-So-LII"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jM4-bS-KiY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,6 +10,7 @@ import UIKit
 class LocationCell: UITableViewCell {
   @IBOutlet var descriptionLabel: UILabel!
   @IBOutlet var addressLabel: UILabel!
+  @IBOutlet var photoImageView: UIImageView!
   
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -29,7 +30,7 @@ class LocationCell: UITableViewCell {
     } else {
       descriptionLabel.text = location.locationDescription
     }
-
+    
     if let placemark = location.placemark {
       var text = ""
       if let tmp = placemark.subThoroughfare {
@@ -48,6 +49,13 @@ class LocationCell: UITableViewCell {
         location.latitude,
         location.longitude)
     }
+    photoImageView.image = thumbnail(for: location)
   }
   
+  func thumbnail(for location: Location) -> UIImage {
+    if location.hasPhoto, let image = location.photoImage {
+      return image
+    }
+    return UIImage()
+  }
 }
