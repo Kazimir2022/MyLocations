@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE2911BB2B8A11E400F8FF47 /* String+AddText.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2911BA2B8A11E400F8FF47 /* String+AddText.swift */; };
 		FE3CDCCD2AACB953003CDFD8 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3CDCCC2AACB953003CDFD8 /* Functions.swift */; };
 		FE3D1C912B4B23AF0005E41F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3D1C902B4B23AF0005E41F /* MapViewController.swift */; };
 		FE4318302A8287F6005EDBFB /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE43182F2A8287F6005EDBFB /* LocationDetailsViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FE2911BA2B8A11E400F8FF47 /* String+AddText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AddText.swift"; sourceTree = "<group>"; };
 		FE3CDCCC2AACB953003CDFD8 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		FE3D1C902B4B23AF0005E41F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		FE43182F2A8287F6005EDBFB /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 		FED298942A63C8A200551123 = {
 			isa = PBXGroup;
 			children = (
+				FE2911BA2B8A11E400F8FF47 /* String+AddText.swift */,
 				FEBCCEC52B7FA276005BF4A1 /* UIImage+Resize.swift */,
 				FEB77A3A2AB6E3FE00F6E9A2 /* Location+CoreDataClass.swift */,
 				FEB77A3B2AB6E3FE00F6E9A2 /* Location+CoreDataProperties.swift */,
@@ -183,6 +186,7 @@
 				FED298AB2A63C8A200551123 /* MyLocations.xcdatamodeld in Sources */,
 				FED298A32A63C8A200551123 /* SceneDelegate.swift in Sources */,
 				FEB77A3C2AB6E3FE00F6E9A2 /* Location+CoreDataClass.swift in Sources */,
+				FE2911BB2B8A11E400F8FF47 /* String+AddText.swift in Sources */,
 				FEA75D362A973F11001A7DE1 /* HudView.swift in Sources */,
 				FE4318302A8287F6005EDBFB /* LocationDetailsViewController.swift in Sources */,
 			);
