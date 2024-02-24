@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Message Label)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovo-HD-C3o">
-                                <rect key="frame" x="93.5" y="60" width="126" height="21"/>
+                                <rect key="frame" x="93" y="60" width="126" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -30,14 +30,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Latitude goes here)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNN-b4-bSs">
-                                <rect key="frame" x="158" y="105" width="155" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="147.5" y="105" width="165.5" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Longitude goes here)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9C-Hc-tUh">
-                                <rect key="frame" x="144" y="135" width="169" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="133" y="135" width="180" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -54,17 +54,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWa-jK-g5G">
-                                <rect key="frame" x="75" y="473" width="163" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Get My Location"/>
+                                <rect key="frame" x="75" y="472" width="162" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Get My Location">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="getLocation" destination="BYZ-38-t0r" eventType="touchUpInside" id="btz-z0-4rc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fiv-Kq-khS">
-                                <rect key="frame" x="96" y="291" width="121" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Tag Location"/>
+                                <rect key="frame" x="96" y="291" width="120" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Tag Location"/>
                                 <connections>
                                     <segue destination="Npd-r6-GNB" kind="show" identifier="TagLocation" id="ZzN-4e-cVV"/>
                                 </connections>
@@ -507,12 +511,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Map" id="LXw-fO-lJX">
-                        <barButtonItem key="leftBarButtonItem" title="Locations" id="ljV-q5-TvA">
+                        <barButtonItem key="leftBarButtonItem" title="Locations" image="Pin" id="ljV-q5-TvA">
                             <connections>
                                 <action selector="showLocations" destination="eV8-Tq-BFx" id="HKt-UU-PPp"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="User" id="RhV-Qq-6Q5">
+                        <barButtonItem key="rightBarButtonItem" title="User" image="User" id="RhV-Qq-6Q5">
                             <connections>
                                 <action selector="showUser" destination="eV8-Tq-BFx" id="47w-yo-QfP"/>
                             </connections>
@@ -584,13 +588,15 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="VdI-hE-8wX"/>
+        <segue reference="8Ov-jL-EhC"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="AccentColor"/>
     <resources>
         <image name="Locations" width="30" height="30"/>
         <image name="Map" width="30" height="30"/>
+        <image name="Pin" width="24" height="24"/>
         <image name="Tag" width="30" height="30"/>
+        <image name="User" width="24" height="24"/>
         <namedColor name="AccentColor">
             <color red="1" green="0.93333333333333335" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
