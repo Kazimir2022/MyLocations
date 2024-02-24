@@ -537,7 +537,7 @@
                 <navigationController id="CiQ-WH-D9I" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Locations" image="Locations" id="YZb-bb-Djj"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xBE-zG-xOJ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -588,7 +588,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="8Ov-jL-EhC"/>
+        <segue reference="VdI-hE-8wX"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="AccentColor"/>
     <resources>
